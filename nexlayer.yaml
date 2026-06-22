@@ -1,0 +1,12 @@
+application:
+  name: textgen
+  pods:
+  - name: app
+    image: atinoda/text-generation-webui:default-cpu
+    path: /
+    servicePorts:
+    - 7860
+    volumes:
+    - name: textgen-models
+      mountPath: /home/user/app/models
+      size: 20Gi
