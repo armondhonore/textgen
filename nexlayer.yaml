@@ -2,7 +2,7 @@ application:
   name: textgen
   pods:
   - name: app
-    image: atinoda/text-generation-webui:default-cpu
+    image: mirror.gcr.io/atinoda/text-generation-webui:default-cpu
     path: /
     servicePorts:
     - 7860
