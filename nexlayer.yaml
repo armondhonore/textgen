@@ -2,11 +2,9 @@ application:
   name: textgen
   pods:
   - name: app
-    image: atinoda/text-generation-webui:default-cpu
+    image: mirror.gcr.io/atinoda/text-generation-webui:default-cpu
     path: /
     servicePorts:
     - 7860
-    volumes:
-    - name: textgen-models
-      mountPath: /home/user/app/models
-      size: 20Gi
+    vars:
+      EXTRA_LAUNCH_ARGS: "--listen --listen-port 7860 --api-port 5000"
